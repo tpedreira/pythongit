@@ -1,9 +1,9 @@
-length = int(input("What is the length of the rectangle? "))
+#Find the Area
 
-if length < 0:
-    raise ValueError("Positive numbers only!")
-    length = int(input("What is the length of the rectangle? "))
+length = float(input("Enter the length: "))
 
+width = float(input("Enter the width: "))
 
+area = length * width
 
-#dt
+print("The area is: ", area)
