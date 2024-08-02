@@ -6,4 +6,4 @@ exRate = 0.92
 
 converted = usd * exRate
 
-print("${:,.2f}".format(usd), " USD is equal to ", "£{:,.2f}".format(converted), " EUROS")
+print("${:,.2f}".format(usd), "USD is equal to ", "£{:,.2f}".format(converted), "EUROS")
