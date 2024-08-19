@@ -16,11 +16,22 @@
 # print(firstName + lastName + "s" + " favorite color is " + favColor)
 #
 
-x = -3
-y = 500
-if x >= y and x <= y:
-    print("X is greater than Y")
-elif x < 0 and y > 100:
-    print("X is less than 0")
+# x = -3
+# y = 500
+# if x >= y and x <= y:
+#     print("X is greater than Y")
+# elif x < 0 and y > 100:
+#     print("X is less than 0")
+# else:
+#     print("Y is greater than X")
+
+x = "malayala"
+
+w = ""
+for i in x:
+    w = i + w
+
+if (x == w):
+    print("Yes")
 else:
-    print("Y is greater than X")
+    print("No")
