@@ -23,18 +23,18 @@ def update_item():
     name = input("Enter the name of the item to update: ")
     for item in inventory:
         if item["name"] == name:
-            price = input("Enter new price (leave blank to keep unchanged): ")
-            quantity = input("Enter new quantity (leave blank to keep unchanged): ")
-            category = input("Enter new category (leave blank to keep unchanged): ")
+            price = input("Enter new price (blank for unchanged): ")
+            quantity = input("Enter new quantity (blank for unchanged): ")
+            category = input("Enter new category (blank for unchanged): ")
             if price:
                 item["price"] = float(price)
             if quantity:
                 item["quantity"] = int(quantity)
             if category:
                 item["category"] = category
-            print(f"Item '{name}' updated successfully!")
+            print(f"Item '{name}' updated!")
             return
-    print(f"Item '{name}' not found in the inventory.")
+    print(f"Item '{name}' not found.")
 
 def view_inventory():
     if not inventory:
@@ -50,15 +50,15 @@ def remove_item():
     for item in inventory:
         if item["name"] == name:
             inventory.remove(item)
-            print(f"Item '{name}' removed successfully!")
+            print(f"Item '{name}' removed")
             return
-    print(f"Item '{name}' not found in the inventory.")
+    print(f"Item '{name}' not found.")
 
 def search_by_category():
     category = input("Enter the category to search for: ")
     found_items = [item for item in inventory if item["category"] == category]
     if not found_items:
-        print(f"No items found in category '{category}'.")
+        print(f"Items not found in category '{category}'.")
     else:
         print(f"\nItems in category '{category}':")
         for item in found_items:
@@ -87,7 +87,7 @@ while True:
     elif choice == "5":
         search_by_category()
     elif choice == "6":
-        print("Exiting Inventory Management System.")
+        print("Exit Inventory Management System.")
         break
     else:
         print("Invalid choice. Please choose a valid option.")
