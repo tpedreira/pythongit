@@ -1,8 +1,11 @@
-# def is_palindrome(string):
-#     if len(string) <= 1:
-#         return True
-#     if string[0] != string[-1]:
-#         return False
-#     return is_palindrome(string[1:-1])
-# is_palindrome("xana")
+# Palindrome
 
+def is_palindrome(word):
+    word = word.lower()
+    return word == word[::-1]
+
+palindrome = input("Enter a string: ")
+if is_palindrome(palindrome):
+    print("The string is a palindrome.")
+else:
+    print("The string is not a palindrome.")
