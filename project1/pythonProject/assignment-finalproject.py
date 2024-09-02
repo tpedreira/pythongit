@@ -90,4 +90,4 @@ while True:
         print("Exit Inventory Management System.")
         break
     else:
-        print("Invalid choice. Please choose a valid option.")
+        print("Choice is Invalid.")
